@@ -1,0 +1,56 @@
+body {
+    background-color: #333;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#addModal {
+    background-color: #090;
+    color: #fff;
+    padding: .5rem 1rem;
+    width: fit-content;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    opacity: .7;
+    margin-left: 1rem;
+    margin-bottom: .5rem;
+}
+#addBlueModal {
+    background-color: #009;
+    color: #fff;
+    padding: .5rem 1rem;
+    width: fit-content;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    opacity: .7;
+    margin-left: 1rem;
+    margin-bottom: .5rem;
+}
+#addModal:hover, #addBlueModal:hover {
+    opacity: 1;
+}
+
+.modalStyle {
+    color: #ccc;
+    background-color: #111;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #a00;
+    transition-property: top;
+    transition-duration: 0.5s;
+    transition-delay: 0;
+    transition-timing-function: ease-in-out;
+}
+
+.modalBlue {
+    color: #beae00;
+    background-color: #222;
+    border-color: #b68c00;
+    border-width: 2px;
+    width: 60%;
+    border-radius: 10px;
+    transition-property: top;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
