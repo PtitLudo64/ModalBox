@@ -213,7 +213,6 @@ class Modal {
    * Move any remaining modal windows up to fill the space left by the hidden modal window.
    */
   moveNextModals() {
-    console.table(Modal.instances);
     if (this.index < Modal.instances.length) {
       for (let i = this.index; i < Modal.instances.length; i++) {
         const modal = Modal.instances[i];
