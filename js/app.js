@@ -30,10 +30,10 @@ const addBlueModal = document.querySelector("#addBlueModal");
 addModal.addEventListener("click", () => {
   const prodId = (Math.floor(Math.random() * products.length));
   // const m = new Modal(5000, `${products[prodId].product}`);
-  const m = new Modal(3000, `${products[prodId].product}`, 'modalStyle');
+  const m = new Modal(4000, `${products[prodId].product}`, 'modalStyle');
 });
 addBlueModal.addEventListener("click", () => {
   const prodId = (Math.floor(Math.random() * products.length));
   // const m = new Modal(5000, `${products[prodId].product}`);
-  const m = new Modal(3000, `${products[prodId].product}`, 'modalBlue');
+  const m = new Modal(4000, `${products[prodId].product}`, 'modalBlue');
 });

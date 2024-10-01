@@ -137,6 +137,7 @@ class Modal {
     modal.style.transitionProperty = this.classStyles.transitionProperty;
     modal.style.transitionTimingFunction = this.classStyles.transitionTimingFunction;
     modal.classList.add(this.className);
+    modal.classList.add('modalToRemove');
     return modal;
   }
 
@@ -197,8 +198,9 @@ class Modal {
       Modal.topOffset -= this._HEIGHT;
       setTimeout(() => {
         document.body.removeChild(this.modal);
-        if (document.querySelectorAll(`.${this.className}`).length == 0) {
-          Modal.instances = [];
+        // if (document.querySelectorAll(`.${this.className}`).length == 0) {
+        if (document.querySelectorAll(`.modalToRemove`).length == 0) {
+            Modal.instances = [];
         }
         Modal.instances.forEach((m) => {
           m.index--;
@@ -211,6 +213,7 @@ class Modal {
    * Move any remaining modal windows up to fill the space left by the hidden modal window.
    */
   moveNextModals() {
+    console.table(Modal.instances);
     if (this.index < Modal.instances.length) {
       for (let i = this.index; i < Modal.instances.length; i++) {
         const modal = Modal.instances[i];
